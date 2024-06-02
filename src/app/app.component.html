@@ -1,5 +1,7 @@
-<app-header></app-header>
+<app-header [datas]="appDatas" (sendEvent)="setEmail($event)" ></app-header>
   <router-outlet>
     <h1>Merhaba</h1>
+    <h2>{{appDatas.name}}</h2>
+    <h2>{{email}}</h2>
   </router-outlet>
 <app-footer></app-footer>
