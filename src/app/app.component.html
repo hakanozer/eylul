@@ -1,16 +1,22 @@
-<app-header [datas]="appDatas" (sendEvent)="setEmail($event)" ></app-header>
+<app-header [datas]="appDatas" (sendEvent)="setEmail($event)" (phoneEvent)="setPhone($event)" ></app-header>
   <router-outlet>
     <h1>Merhaba</h1>
     <h2>{{appDatas.name}}</h2>
     <h2>{{email}}</h2>
+    <div *ngIf="appPhone">
+      <div>Id: {{appPhone.id}}</div>
+      <div>Tel: {{appPhone.tel}}</div>
+    </div>
   </router-outlet>
   <hr />
- <div *ngIf="directory">
-  <div *ngFor="let folder of directory.childrenUidDirectories">
+
+ <input (keyup)="searchFnc($event)" type="search" placeholder="Search.." />
+ <div *ngIf="newDirectory">
+  <div *ngFor="let folder of newDirectory.childrenUidDirectories">
     <div>{{folder.label}}</div>
   </div>
 
-  <div *ngFor="let item of directory.childrenMedias">
+  <div *ngFor="let item of newDirectory.childrenMedias">
     <div>{{item.label}}</div>
   </div>
 

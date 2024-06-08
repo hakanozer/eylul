@@ -5,23 +5,23 @@ export const data = () : Directory => {
     const m1: Media = {
         uid: "mu1",
         type: "media",
-        label: "media1.jpg"
+        label: "A - media1.jpg"
     } 
 
     const m2: Media = {
         uid: "mu2",
         type: "media",
-        label: "media2.jpg"
+        label: "B - media2.jpg"
     } 
 
     const d1: DD = {
         uid: "du1",
-        label: "Scholl-1"
+        label: "A - Scholl-1"
     }
 
     const d2: DD = {
         uid: "du2",
-        label: "Scholl-2"
+        label: "B - Scholl-2"
     }
 
     const directory : Directory = {
